@@ -28,19 +28,39 @@
                 <div class="logo">
                     <a href="index.html"><img src="img/logo-paideia.svg" alt="Paideia Logo"></a>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
+                <div id="menu-toggle" class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                <nav id="mobile-menu" class="mobile-menu">
+                    <ul class="nav-list">
+                        <li><a class="active" href="index.html">Home</a></li>
                         <li><a href="#">Search Courses</a></li>
                         <li><a href="become-an-instructor.html">Become an Instructor</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Log in</a></li>
+                        <li><a class="login" href="#">Log in</a></li>
                         <li><a class="signup" href="#">Sign up</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.getElementById('menu-toggle');
+            var nav = document.getElementById('mobile-menu');
+            var closeMenu = document.getElementById('close-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+            
+            closeMenu.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+    </script>  
     <main id="main-content">
         <section class="intro-section">
             <div class="container">
@@ -283,7 +303,7 @@
                         <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
                         <form action="#">
                             <input type="email" placeholder="Your Email">
-                            <button type="submit"><img src="img/arrow-right.svg" alt="Arrow right"></button>
+                            <button type="submit"><img src="img/arrow.-right.svg" alt="Arrow right"></button>
                         </form>
                     </div>
                     <ul class="legal-menu">
