@@ -1,5 +1,3 @@
-/* Aquí tienes el archivo CSS completo con los ajustes para la nueva página */
-
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -62,7 +60,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 180px; /* Aumentar tamaño del logo */
+    width: 180px;
 }
 
 header nav ul {
@@ -83,13 +81,17 @@ header nav ul li a {
     font-size: 16px;
     padding: 10px 0;
     position: relative;
-    font-weight: bold; /* Poner en negrita */
+    font-weight: bold; 
 }
 
-header nav ul li a:hover,
 header nav ul li a.active {
-    color: #FFF616;
-    border-bottom: 2px solid #FFF616;
+    color: #FFF616 !important;
+    border-bottom: 2px solid #FFF616 !important;
+}
+
+header nav ul li a:hover {
+    color: white;
+    border-bottom: 2px solid white;
 }
 
 header nav ul li .signup {
@@ -103,7 +105,167 @@ header nav ul li .signup {
 header nav ul li .signup:hover {
     background-color: #D11067;
     color: white;
+    border-bottom: none;
+
 }
+
+header nav ul li .login {
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-bottom: none !important;
+
+}
+
+header nav ul li .login:hover {
+    color: #D11067;
+    border-bottom: none !important;
+
+}
+
+
+footer {
+    background-color: #172655;
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.left-block, .center-block, .right-block {
+    margin: 10px;
+}
+
+.newsletter {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.newsletter h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal; 
+}
+
+.newsletter form {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 35px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    width: 300px;
+    max-width: 100%;
+    background: transparent; 
+    color: white; 
+    height: 30px;
+}
+
+.newsletter input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter button:hover {
+    background-color: #D11067;
+}
+
+.newsletter button img {
+    width: 20px;
+    height: 20px;
+    color: white !important;
+
+}
+
+.legal-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.legal-menu li {
+    margin-bottom: 0;
+}
+
+.legal-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px; 
+}
+
+.legal-menu a:hover,
+.legal-menu a:focus {
+    text-decoration: underline;
+}
+
+.right-block {
+    text-align: left;
+}
+
+.right-block img {
+    width: 180px; 
+    margin-bottom: 20px;
+}
+
+.right-block p {
+    margin: 5px 0;
+}
+
+.right-block a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-block a:hover,
+.right-block a:focus {
+    text-decoration: underline;
+}
+
+.credits {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.credits a {
+    color: white;
+    text-decoration: underline;
+}
+
+.credits a:hover,
+.credits a:focus {
+    color: #D11067;
+}
+
 
 .skip-to-content {
     position: absolute;
@@ -126,213 +288,6 @@ main {
     padding: 0;
 }
 
-.intro-section {
-    text-align: center;
-    color: white;
-    padding: 100px 20px;
-    background: url('../img/blackboard.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.intro-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.intro-section h1 {
-    font-size: 60px;
-    font-family: 'Satisfy', cursive;
-    margin-bottom: 20px;
-    font-weight: normal; /* Quitar negrita */
-}
-
-.intro-section .highlight {
-    color: #FFF616;
-}
-
-.intro-section .subtitle {
-    margin-bottom: 20px;
-}
-
-.search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    position: relative;
-    width: 100%;
-    max-width: 700px; /* Ajusta el ancho máximo del contenedor */
-    margin: 0 auto; /* Centrando el contenedor */
-}
-
-.search-form input[type="text"] {
-    padding: 25px 30px; /* Aumentar el padding para mayor altura */
-    font-size: 20px;
-    width: 100%;
-    border: none;
-    border-radius: 35px; /* Bordes redondeados en todos los lados */
-    outline: none;
-    box-sizing: border-box;
-    padding-right: 150px; /* Espacio para el botón */
-}
-
-.search-form button {
-    padding: 15px 20px; /* Reducir el padding para menor altura */
-    font-size: 18px;
-    font-weight: bold; /* Poner el texto en negrita */
-    border: none;
-    background-color: #D11067;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 50px; /* Ajusta la altura del botón */
-    border-radius: 20px; /* Aplicar borde redondeado de 20px */
-}
-
-.search-form button img {
-    margin-right: 8px;
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.features .feature {
-    text-align: center;
-    width: 30%;
-}
-
-.features .feature img {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.features .feature h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.features .feature p {
-    font-size: 15px;
-}
-
-.popular-courses {
-    margin: 40px 0;
-    text-align: left;
-    padding: 40px 20px;
-    background-color: #FFF;
-}
-
-.popular-courses h2 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #D11067;
-    margin-bottom: 10px;
-}
-
-.popular-courses p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.popular-courses .courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Ajuste del tamaño mínimo de las tarjetas */
-    gap: 20px;
-    justify-items: center;
-    text-align: left; /* Asegura que el contenido de los cursos esté alineado a la izquierda */
-}
-
-.popular-courses .course {
-    background-color: #FFF;
-    border: 1px solid #EDEDED;
-    border-radius: 10px;
-    text-align: left;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    width: 270px; /* Ancho fijo para las tarjetas */
-    position: relative; /* Añadido para posicionar las etiquetas */
-}
-
-.popular-courses .course img {
-    width: 100%;
-    height: 180px; /* Altura fija para las imágenes */
-    object-fit: cover;
-}
-
-.popular-courses .course-info {
-    padding: 15px;
-}
-
-.popular-courses .course h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #7A1628;
-    line-height: 1.2;
-}
-
-.popular-courses .course p {
-    font-size: 12px;
-    color: #666;
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
-}
-
-.popular-courses .course p img {
-    width: 16px; /* Tamaño reducido para los íconos */
-    height: 16px; /* Tamaño reducido para los íconos */
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-    margin-left: 10px; /* Espacio entre los íconos */
-}
-
-.popular-courses .course p img:first-child {
-    margin-left: 0; /* Elimina el margen izquierdo del primer ícono */
-}
-
-.popular-courses .course .tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 5px 10px;
-    border-radius: 21px;
-    font-size: 14px;
-    color: white;
-    display: inline-block;
-}
-
-.popular-courses .course .tag.new {
-    background-color: #D11067;
-    height: 25px;
-    align-items: center;
-    display: flex;
-}
-
-.popular-courses .course .tag.best-seller {
-    background-color: #FFF616;
-    color: #D11067; /* Cambiar el color del texto para que contraste */
-    left: auto; /* Resetea el valor de la izquierda */
-    right: 10px; /* Posiciona la etiqueta a la derecha */
-    height: 25px;
-    align-items: center;
-    display: flex;
-}
-
-.popular-courses .course:hover {
-    border-color: #172655;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-}
 
 .browse-all-btn, .apply-now-btn, .register-now-btn, .apply-btn {
     padding: 15px 20px;
@@ -378,30 +333,245 @@ main {
     color: white !important;
 }
 
+.intro-section {
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    background: url('../img/blackboard.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.intro-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro-section h1 {
+    font-size: 60px;
+    font-family: 'Satisfy', cursive;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.intro-section .highlight {
+    color: #FFF616;
+}
+
+.intro-section .subtitle {
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    max-width: 700px; 
+    margin: 0 auto;
+}
+
+.search-form input[type="text"] {
+    padding: 25px 30px; 
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 35px; 
+    outline: none;
+    box-sizing: border-box;
+    padding-right: 150px; 
+}
+
+.search-form button {
+    padding: 15px 20px; 
+    font-size: 18px;
+    font-weight: bold; 
+    border: none;
+    background-color: #D11067;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px; 
+    border-radius: 20px; 
+}
+
+.search-form button:hover {
+    background-color: #172655;
+}
+
+.search-form button img {
+    margin-right: 8px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.features .feature {
+    text-align: center;
+    width: 30%;
+}
+
+.features .feature img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.features .feature h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.features .feature p {
+    font-size: 15px;
+}
+
+
+
+.popular-courses {
+    margin: 40px 0;
+    text-align: left;
+    padding: 40px 20px;
+    background-color: #FFF;
+}
+
+.popular-courses h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #D11067;
+    margin-bottom: 10px;
+}
+
+.popular-courses p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.popular-courses .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); 
+    gap: 20px;
+    justify-items: center;
+    text-align: left; 
+}
+
+.popular-courses .course {
+    background-color: #FFF;
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 270px; 
+    position: relative; 
+}
+
+.popular-courses .course img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+}
+
+.popular-courses .course-info {
+    padding: 15px;
+}
+
+.popular-courses .course h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #7A1628;
+    line-height: 1.2;
+}
+
+.popular-courses .course p {
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.popular-courses .course p img {
+    width: 16px; 
+    height: 16px; 
+    margin-right: 5px; 
+    margin-left: 10px; 
+}
+
+.popular-courses .course p img:first-child {
+    margin-left: 0; 
+}
+
+.popular-courses .course .tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 21px;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+}
+
+.popular-courses .course .tag.new {
+    background-color: #D11067;
+    height: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.popular-courses .course .tag.best-seller {
+    background-color: #FFF616;
+    color: #D11067; 
+    left: auto; 
+    right: 10px; 
+    height: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.popular-courses .course:hover {
+    border-color: #172655;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+
 .learning-path {
     text-align: center;
-    padding: 100px 20px; /* Ajusta el padding según tus necesidades */
+    padding: 100px 20px; 
     background: url('../img/learn-path.jpg') no-repeat center center;
     background-size: cover;
     color: white;
-    position: relative; /* Para controlar la posición de los elementos secundarios */
+    position: relative; 
 }
 
 .learning-path .container {
-    max-width: 1200px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido */
-    padding: 0 20px; /* Espacio interior para no pegar al borde */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
 
 .learning-path h2 {
-    font-size: 60px; /* Tamaño de fuente igual que el primer h1 */
-    font-family: 'Satisfy', cursive; /* Fuente cursiva */
+    font-size: 60px; 
+    font-family: 'Satisfy', cursive;
     margin-bottom: 20px;
     font-weight: normal;
 }
 
 .learning-path p {
-    font-size: 20px; /* Tamaño de fuente */
+    font-size: 20px; 
     margin-bottom: 40px;
 }
 
@@ -417,8 +587,8 @@ main {
 }
 
 .learning-path .get-started-btn:hover {
-    border-color: #FFF616; /* Cambiar la vora a groc */
-    color: #FFF616; /* Cambiar el color del text a groc */
+    border-color: #FFF616; 
+    color: #FFF616; 
 }
 
 .online-learning-solutions {
@@ -516,7 +686,7 @@ main {
 }
 
 .top-categories {
-    background-color: #EDEDED; /* Fondo gris claro */
+    background-color: #EDEDED; 
     padding: 60px 20px;
     text-align: center;
 }
@@ -534,7 +704,7 @@ main {
 
 .top-categories .categories {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     justify-items: center;
 }
@@ -565,12 +735,12 @@ main {
 }
 
 .top-categories .category.double-height {
-    grid-row: span 2; /* Ocupa el espacio de 2 filas */
-    height: 300px; /* Ajusta la altura para abarcar 2 filas */
+    grid-row: span 2; 
+    height: 300px; 
 }
 
 .top-categories .category:hover {
-    background-color: #D11067; /* Cambiar color de fondo a fucsia en hover */
+    background-color: #D11067; 
     color: white;
 }
 
@@ -578,7 +748,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FEFBF4; /* Color de fondo */
+    background-color: #FEFBF4;  
     padding: 60px 20px;
     text-align: left;
 }
@@ -589,20 +759,20 @@ main {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    flex-direction: row; /* Asegura que la dirección del flex sea en fila */
+    flex-direction: row; 
 }
 
 .become-instructor .text {
     max-width: 700px;
-    margin-left: 20px; /* Añade margen izquierdo para alinear el texto */
+    margin-left: 20px; 
 }
 
 .become-instructor h2 {
     font-size: 30px;
-    color: #7A1628; /* Color granate */
+    color: #7A1628; 
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
-    font-weight: bold; /* En negrita */
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; 
 }
 
 .become-instructor p {
@@ -614,10 +784,10 @@ main {
 .become-instructor img {
     max-width: 100%;
     border-radius: 10px;
-    margin-right: 100px; /* Añade margen derecho para alinear la imagen */
+    margin-right: 100px; 
 }
 
-/* General Section Styles */
+/* Become an Instructor */
 .instructor-section, .steps-to-instructor, .step-details {
     text-align: left;
     background-color: #FFF;
@@ -632,7 +802,6 @@ main {
     padding: 0 20px;
 }
 
-/* Specific Section Styles */
 .instructor-section h1, .ambassador-class h1 {
     font-size: 30px;
     font-weight: bold;
@@ -660,13 +829,13 @@ main {
     margin-bottom: 30px;
 }
 .instructor-section .instructor-image {
-    width: 70%; /* Reduce el ancho al 50% */
-    height: auto; /* Mantén la proporción de aspecto */
+    width: 70%; 
+    height: auto; 
     margin-bottom: 0px;
-    display: block; /* Esto asegura que la imagen se trate como un bloque */
-    margin-left: auto; /* Esto asegura que la imagen se centre horizontalmente */
-    margin-right: auto; /* Esto asegura que la imagen se centre horizontalmente */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Agrega un sombreado suave */
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 
@@ -686,8 +855,6 @@ main {
 .step-details .step {
     margin-bottom: 40px;
 }
-
-
 
 
 .career-path {
@@ -722,143 +889,8 @@ main {
     border-bottom: 1px solid #EDEDED;
 }
 
-footer {
-    background-color: #172655;
-    color: white;
-    padding: 40px 20px;
-    font-size: 14px;
-}
 
-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.left-block, .center-block, .right-block {
-    margin: 10px;
-}
-
-.newsletter {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.newsletter h2 {
-    font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: normal; /* Eliminar negrita */
-}
-
-.newsletter form {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-    padding: 5px;
-    border-radius: 35px;
-}
-
-.newsletter input[type="email"] {
-    padding: 10px 20px;
-    border-radius: 35px;
-    border: none;
-    outline: none;
-    width: 300px;
-    max-width: 100%;
-    background: transparent; /* Fondo transparente */
-    color: white; /* Color del texto */
-    height: 30px;
-}
-
-.newsletter input[type="email"]::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Placeholder translúcido */
-}
-
-.newsletter button {
-    padding: 10px;
-    background-color: white;
-    border: none;
-    border-radius: 50%; /* Hacer el fondo redondo */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.newsletter button img {
-    width: 20px;
-    height: 20px;
-}
-
-.legal-menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    text-align: left;
-    margin-top: 20px;
-}
-
-.legal-menu li {
-    margin-bottom: 0;
-}
-
-.legal-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 12px; /* Reducir tamaño de letra */
-}
-
-.legal-menu a:hover,
-.legal-menu a:focus {
-    text-decoration: underline;
-}
-
-.right-block {
-    text-align: left;
-}
-
-.right-block img {
-    width: 180px; /* Aumentar tamaño del logo */
-    margin-bottom: 20px;
-}
-
-.right-block p {
-    margin: 5px 0;
-}
-
-.right-block a {
-    color: white;
-    text-decoration: none;
-}
-
-.right-block a:hover,
-.right-block a:focus {
-    text-decoration: underline;
-}
-
-.credits {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
-}
-
-.credits a {
-    color: white;
-    text-decoration: underline;
-}
-
-.credits a:hover,
-.credits a:focus {
-    color: #D11067;
-}
-
-/* Additions to the existing CSS */
 .two-columns {
     display: flex;
     justify-content: space-between;
@@ -871,12 +903,10 @@ footer .container {
 
 .right-column {
     width: 30%;
-    padding-left: 20px; /* Add some space between the columns */
+    padding-left: 20px; 
 }
 
 
-
-/* Styles for the Instructor Career Path */
 .instructor-career-path {
     padding: 0;
     max-width: 300px;
@@ -926,12 +956,12 @@ footer .container {
     margin-bottom: 10px;
     font-weight: lighter;
     display: flex;
-    align-items: center; /* Align items in the center vertically */
+    align-items: center;
 }
 
 .instructor-career-path ul li img, .step-details .info-box p img {
-    width: 20px !important; /* Set the width of the icons */
-    height: 20px !important; /* Set the height of the icons */
+    width: 20px !important; 
+    height: 20px !important; 
     margin-right: 5px !important;
 }
 
@@ -953,7 +983,7 @@ footer .container {
     height: 25px;
     border-left: 4px solid #333;
     border-bottom: 4px solid #333;
-    transform: rotate(-45deg); /* Rotate to point downwards */
+    transform: rotate(-45deg); 
     margin-left: 5px;
     vertical-align: middle;
 }
@@ -963,7 +993,6 @@ footer .container {
 }
 
 
-/* Estilos para la sección "Steps to Become an Instructor" */
 .steps-to-instructor {
     background-color: #FFF;
     margin-top: 40px;
@@ -1024,14 +1053,14 @@ footer .container {
 
 .step-number {
     display: inline-block;
-    width: 30px;  /* Ajusta el ancho del cuadrado */
-    height: 30px;  /* Ajusta la altura del cuadrado */
-    line-height: 30px;  /* Alinea el número verticalmente */
-    text-align: center;  /* Alinea el número horizontalmente */
-    border: 1px solid ;  /* Borde del cuadrado azul */
+    width: 30px; 
+    height: 30px;  
+    line-height: 30px;  
+    text-align: center;  
+    border: 1px solid ;  
     font-weight: bold;
-    margin-right: 5px;  /* Espacio entre el número y el texto */
-    background-color: white;  /* Fondo blanco */
+    margin-right: 5px;  
+    background-color: white;  
 }
 
 
@@ -1059,8 +1088,8 @@ footer .container {
 .info-box ul {
     list-style: disc;
     padding-left: 20px;
-    columns: 3; /* Distribuye en 2 columnas */
-    column-gap: 20px; /* Espacio entre columnas */
+    columns: 3; 
+    column-gap: 20px;
 }
 
 .info-box ul li {
@@ -1095,8 +1124,6 @@ footer .container {
     margin-top: 20px;
 }
 
-
-/* Specific styles for the contact page */
 
 .offices {
     display: flex;
@@ -1147,7 +1174,7 @@ footer .container {
     left: 60px;    
     width: 50px !important;
     height: 50px !important;
-    border: 4px solid #fff !important; /* Añade un borde blanco para separar la bandera de la imagen principal */
+    border: 4px solid #fff !important;
     border-radius: 50%;
     margin-bottom: 0px;
 }
@@ -1213,29 +1240,29 @@ footer .container {
     border: 1px solid #EDEDED;
     padding: 0px 10px;
     background-color: #ffffff;
-    max-height: auto; /* Ajusta esta altura según sea necesario */
+    max-height: auto; 
 }
 
 .area-list li {
     font-size: 14px;
     color: #333;
-    position: relative; /* Para posicionar el label y checkbox correctamente */
+    position: relative; 
 }
 
 .area-list input[type="checkbox"] {
-    display: none; /* Oculta el checkbox */
+    display: none; 
 }
 
 .area-list label {
     display: block;
-    cursor: pointer; /* Cambia el cursor para indicar que es clicable */
+    cursor: pointer; 
     padding: 5px;
     border-radius: 0px;
 }
 
 .area-list input[type="checkbox"]:checked + label {
-    background-color: #e0e0e0; /* Fondo gris claro cuando está seleccionado */
-    color: #000; /* Color del texto cuando está seleccionado */
+    background-color: #e0e0e0; 
+    color: #000; 
 }
 
 
@@ -1282,64 +1309,99 @@ footer .container {
 .trans {
     text-decoration: underline !important;
     color: #7A1628 !important;
-
 }
-/* Responsive Design */
 
-@media (max-width: 768px) {
-    header .top-bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .logo-nav-container .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .features, .popular-courses .courses, .online-learning-solutions .solutions, .top-categories .categories {
-        flex-direction: column;
-    }
-
-    .features .feature, .popular-courses .course, .online-learning-solutions .solution, .top-categories .category {
-        width: 80%;
-        margin: 10px auto;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr; /* Una columna */
-    }
-
-    .right-block {
-        text-align: center;
-    }
-
-    .right-block img {
-        margin-bottom: 10px;
-    }
-
-    .newsletter form {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .newsletter input[type="email"],
-    .newsletter button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .legal-menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .legal-menu a {
-        text-align: center;
-    }
+.trans:hover {
+    text-decoration: underline 3px!important;
 }
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before, .menu-toggle .hamburger::after  {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+        
+        nav {
+            display: none;
+        }
+        
+        nav.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1000;
+        }
+        
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            padding-top: 100px;
+        }
+        
+        .nav-list li {
+            text-align: left;
+
+            margin: 20px 0;
+        }
+        
+        .nav-list li a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        
+        header .top-bar {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer .newsletter {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer .newsletter input[type="email"],
+        footer .newsletter button {
+            width: 100%;
+            margin: 5px 0;
+            border-radius: 35px;
+        }
+
+        footer ul {
+            flex-direction: column;
+        }
+    }
+
+
